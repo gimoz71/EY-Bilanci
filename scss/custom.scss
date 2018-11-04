@@ -1,0 +1,489 @@
+$border-radius: 0rem !important;
+$fa-font-path:"../webfonts";
+@import "../bootstrap/scss/bootstrap";
+@import "../bootstrap/scss/font-awesome/fontawesome";
+@import "../bootstrap/scss/font-awesome/solid.scss";
+@import "../bootstrap/scss/font-awesome/regular.scss";
+@import "../bootstrap/scss/font-awesome/brands.scss";
+
+
+@mixin transition($what: all, $time: 0.2s, $how: ease-in-out) {
+    -webkit-transition: $what $time $how;
+    -moz-transition:    $what $time $how;
+    -ms-transition:     $what $time $how;
+    -o-transition:      $what $time $how;
+    transition:         $what $time $how;
+}
+
+
+//--------------------------------
+// variabili
+//--------------------------------
+
+$ey-gradient-dark: linear-gradient(#383838, #000);
+$ey-gradient-light: linear-gradient(#FAFAFA, #E6E6E6);
+$ey-default-yellow: #FFDB00;
+$ey-default-gray: #ccc;
+
+
+//--------------------------------
+// elementi base
+//--------------------------------
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #ccc;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='black'><polygon points='0,0 100,0 50,50'/></svg>") no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 10px) calc(100% - 5px);
+    background-repeat: no-repeat;
+}
+
+.overflowContainer{
+    overflow: auto;
+}
+
+.logo {
+    @include text-hide;
+    padding: 0;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: cover;
+    height: 35px !important;
+    width: 38px !important;
+}
+
+// decodifica colore schede 
+
+.GRI {
+    border-left: solid;
+
+    &.ey-color {
+        border-color: $ey-default-yellow;
+    }
+    &.neutral {
+        border-color: $ey-default-gray;
+    }
+    &.c101 {
+        border-color: #1E2C4F;
+    }
+    &.c102 {
+        border-color: #003B73;
+    }
+    &.c103 {
+        border-color: #014A98;
+    }
+    &.c200 {
+        border-color: #742281;
+    }
+    &.c300 {
+        border-color: #02956D;
+    }
+    &.c400 {
+        border-color: #FF6B00;
+    }
+}
+input[type='checkbox'] {
+    position: relative;
+}
+
+.selettore {
+    position: relative;
+    label {
+        font-size: 0;
+        line-height: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+/*input[type='checkbox']::after{
+    @include transition(all,.5s,ease-out);
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: -3px;
+    left: -3px;
+    border: 1px solid $ey-default-gray;
+    background: #fff;
+    border-radius: 0px;
+}
+
+input[type='checkbox']:checked::after {
+    @include transition(all,.5s,ease-out);
+    border: 3px solid #fff;
+    background: darken($ey-default-yellow, 10);
+    //outline: 1px solid $ey-default-gray;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.25), inset 0 0 1px rgba(0,0,0,.25),  0 0 1px 1px rgba(0,0,0,.2);
+}
+
+input[type='checkbox'].undefined:checked::after {
+    @include transition(all,.5s,ease-out);
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    background: $ey-default-yellow;
+}*/
+
+input[type='checkbox'] + label::before{
+    @include transition(all,.5s,ease-out);
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 6px;
+    left: 10px;
+    border: 1px solid $ey-default-gray;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,.1);
+}
+
+input[type='checkbox']:checked + label::before {
+    @include transition(all,.5s,ease-out);
+    border: 3px solid #fff;
+    background: darken($ey-default-yellow, 0);
+    //outline: 1px solid $ey-default-gray;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.35), 0 0 1px 1px rgba(0,0,0,.1);
+}
+
+input[type='checkbox'].undefined:checked + label::before {
+    @include transition(all,.5s,ease-out);
+    border-top-width: 8px;
+    border-bottom-width: 8px;
+    background: $ey-default-yellow;
+}
+
+
+
+//--------------------------------
+// helper
+//--------------------------------
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+.test {
+    border: solid 1px #f00;
+}
+
+
+//--------------------------------
+// header
+//--------------------------------
+
+.navbar {
+    background: $ey-gradient-dark;
+    .navbar-text {
+        color: $ey-default-gray;
+        padding: 0;
+        .thumb {
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+    }
+}
+
+//--------------------------------
+// content
+//--------------------------------
+
+
+.welcome {
+    flex: 1;  
+    background: url(../images/background-welcome.png), $ey-gradient-dark;
+    background-position: -30px 30px, 0 0 ;
+    background-repeat: no-repeat, no-repeat;
+    
+    margin: 10px;
+    padding: 5px;
+    div {
+        border: solid 1px rgba(255,255,255,.2);
+        min-height: 200px;
+        padding: 30px;
+        color: #fff;
+        .yellow-frame {
+            width: 110px;
+            height: auto;
+            float: none;
+            margin-bottom: .5em;
+            display: block;
+            @include media-breakpoint-up(xl) {
+                 float: left;
+            margin-right: 1em;
+            margin-bottom: .5em;
+                
+            }
+        }
+        .welcome-title {
+            line-height: 1em;
+        }
+    }
+}
+
+
+.filtri, .scheda-header {
+
+    border-bottom: solid 1px $ey-default-gray;
+}
+
+// lista
+
+
+.filtri-categorie {
+    display: flex;
+    background: darken($ey-default-gray, 22);
+    a {
+        color: #fff;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-size: .75em;
+        &.filtro {
+            text-align: center;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: auto;
+        }
+        &:hover {
+            background: darken($ey-default-gray, 18 );
+            text-decoration: none;
+        }
+        &:focus, &.active {
+            background: darken($ey-default-gray, 7);
+            text-decoration: none;
+        }
+    }
+}
+
+.filtri, .brief-scheda {
+    display: flex;
+    background: lighten($ey-default-gray, 7.5);
+    line-height: 30px;
+    color: #444;
+    font-size: .7em;
+    align-items: center;
+    .selettore {
+        flex: 0 0 40px; // rende fissa la larghezza 
+        text-align: center
+    }
+    input[type='checkbox'] {
+        font-size: 2em;
+        /*position: relative;
+        top: 3px;*/
+        vertical-align:middle;
+        cursor: pointer;
+    }
+    label {
+        margin: 0;
+        cursor: pointer;
+    }
+    #actions {
+        display: inline-block;
+        margin-left: 15px;
+        border-left: solid 1px $ey-default-gray;
+        .action {
+            color: #444;
+            text-decoration: none;
+            padding: 8px 15px;
+            &:hover {
+                background: lighten($ey-default-gray, 4);
+            }
+        }
+    }
+}
+
+
+
+.brief-scheda {
+    width: 100%;
+    margin-right: 10px;
+    border-right: solid 1px $ey-default-gray;
+    @include transition(all,.1s,ease-out);
+    &.checked {
+        background-color: lighten($ey-default-gray, 13);
+    }
+    &:hover, &.selected {
+        margin-right: 0;
+    }
+    &.selected {
+        .info {
+            background: #fff !important;
+        }
+    }
+    .info {
+        flex: 1; // rende fluida la larghezza
+        min-height: 70px;
+        background: $ey-gradient-light;
+        
+        cursor: pointer;
+        &.GRI {
+            border-width: 8px;
+        }
+        .stato {
+            border-bottom: solid 1px $ey-default-gray;
+            line-height: 1em;
+            padding: 5px 8px;
+            .action {
+                float: right;
+                font-size: 1.1em;
+                text-transform: uppercase;
+                .action-icon {
+                    @extend %fa-icon;
+                    @extend .fas;
+                    vertical-align: middle;
+                    margin-left: 3px;
+                    color: #999;
+                    &:before {
+                        content: fa-content($fa-var-chevron-right);
+                    }
+                }
+            }
+        }
+        .nome {
+            border-top: solid 1px #fff;
+            padding: 4px 8px;
+            .codice {
+                font-size: 2.3em;
+                line-height: 1em;
+                font-weight: 500;
+                margin: 0;
+                color: #000;
+            }
+            .descrizione {
+                font-size: 1em;
+                line-height: 1em; 
+                margin: 0;
+            }
+
+        }
+    }
+    border-bottom: solid 1px  $ey-default-gray;
+}
+
+// scheda
+.col-scheda {
+    background: #E0E0E0;
+    .brief-scheda {
+        //height: 60px;
+        line-height: 60px;
+        border-bottom: solid 1px $ey-default-gray;
+        .info {
+            padding: 4px 0;
+            cursor: default;
+        }
+        &:hover {
+            margin-right: 10px;
+        }
+    }
+
+    .scheda-header {
+        font-size: .7em;
+        background: $ey-gradient-light;
+    }
+    .info {
+        line-height: 60px;
+        height: 60px;
+        min-height: 0;
+        flex: 1; // rende fluida la larghezza
+        .titolo {
+            font-size: 2.6em;
+            padding: 0 8px;
+            line-height: 60px;
+            font-weight: 500;
+            margin: 0;
+            color: #000;
+        }
+        
+        //cursor: pointer;
+        &.GRI {
+            border-width: 11px;
+        }
+        .stato {
+            border-bottom: solid 1px $ey-default-gray;
+            line-height: 1em;
+            padding: 5px 8px;
+            .action {
+                float: right;
+                font-size: 1.1em;
+                text-transform: uppercase;
+            }
+        }
+        .nome {
+            border-top: solid 1px #fff;
+            padding: 4px 8px;
+            .codice {
+                font-size: 2.3em;
+                line-height: 1em;
+                font-weight: 500;
+                margin: 0;
+                color: #000;
+            }
+            .descrizione {
+                font-size: 1em;
+                line-height: 1em; 
+                margin: 0;
+            }
+
+        }
+    }
+    .form-delega {
+        flex: 1;    
+        border: solid 1px $ey-default-gray;
+        border-top: 0;
+        background: #F8F8F8;
+        margin: 0 10px;
+        .singola-delega {
+            padding: 1em;
+            border-bottom: solid 1px $ey-default-gray;
+            &:last-of-type {
+                border: none;
+            }
+        }
+        .form-group {
+            margin-bottom: .5em;
+            label {
+                font-size: .9em;
+            }
+        }
+        a {
+            color: #444;
+            //text-decoration: none;
+            font-size: .8em;
+        }
+        .add a {
+            margin-right: 10px;
+            color: #999;
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        .submit a {
+            margin-left: 10px;
+            color: #999;
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+
+        .add-icon {
+            @extend %fa-icon;
+            @extend .far;
+            vertical-align: middle;
+            margin-right: 5px;
+            
+            &:before {
+                content: fa-content($fa-var-plus-square);
+            }
+        }
+    }
+}
