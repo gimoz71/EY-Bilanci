@@ -22,10 +22,10 @@
                 </li>
             </ul>
         </nav>
-        <div class="parentOverflowContainer">
+        <div class="parentOverflowContainer"><!-- classe padre per calcolare l'altezza dei contenitori scrollabili -->
             <div class="row no-gutters">
                 <div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 col-lista">
-                    <div class="otherOneOverflow">
+                    <div class="otherOneOverflow"> <!-- classe per calcolare la differenza tra viewport e l'altezza dei contenitori scrollabili -->
                         <div class="filtri-categorie">
                             <a href="#" class="filtro active">Tutte</a>
                             <a href="#" class="filtro">Ricevute</a>
@@ -39,8 +39,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters overflowContainer">
+                    <div class="row no-gutters overflowContainer"> <!-- classe per calcolare l'altezza dei contenitori scrollabili -->
                         <div class="brief-scheda checked">
+
+                            <!-- LE CLASSI PER I CODICI COLORE DELLA BARRETTA LATERALE:
+                                                            
+                                .GRI:       'trigger' barretta colorata.
+                                .ey-color:  giallo ufficiale.
+                                .neutrale:  generico per titoli.
+                                .c101, .c102, .c103, .c200, .c300, .c400: colori relativi alla categria della scheda. Ho ripreso ovviamente come da template, quelli ufficiali GRI.
+                            
+                            -->
+
                             <div class="selettore"><input type="checkbox" checked id="selection2"><label for="selection2">selection2</label></div>
                             <div class="info GRI c102">
                                 <div class="stato"><span>Approvata</span><span class="action">compila <i class="action-icon"></i></span></div>
@@ -143,9 +153,17 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-7 col-xl-8 col-scheda">
-                    <div class="otherOneOverflow"> <!-- classe per calcolare l'altezza dei contenitori -->
+                    <div class="otherOneOverflow"> <!-- classe per calcolare la differenza tra viewport e l'altezza dei contenitori scrollabili -->
                         <div class="scheda-header"> 
 
+                            <!-- LE CLASSI PER I CODICI COLORE DELLA BARRETTA LATERALE:
+                                
+                                .GRI:       'trigger' barretta colorata.
+                                .ey-color:  giallo ufficiale.
+                                .neutrale:  generico per titoli.
+                                .c101, .c102, .c103, .c200, .c300, .c400: colori relativi alla categria della scheda. Ho ripreso ovviamente come da template, quelli ufficiali GRI.
+                            
+                            -->
                             <!-- titolo scheda (d-none la nasconde) -->
                             <div class="info GRI c200 d-none">
                                 <div class="nome d-none">
@@ -165,7 +183,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row no-gutters overflowContainer">
+
+                    <div class="row no-gutters overflowContainer"> <!-- classe per calcolare l'altezza dei contenitori scrollabili -->
 
                         <!-- blocco home page -->
                         <div class="welcome">
