@@ -25,7 +25,6 @@ $ey-gradient-light: linear-gradient(#FAFAFA, #E6E6E6);
 $ey-default-yellow: #FFDB00;
 $ey-default-gray: #ccc;
 
-
 //--------------------------------
 // elementi base
 //--------------------------------
@@ -290,9 +289,10 @@ input[type='checkbox'].undefined:checked + label::before {
         margin-left: 15px;
         border-left: solid 1px $ey-default-gray;
         .action {
+            display: inline-block;
             color: #444;
             text-decoration: none;
-            padding: 8px 15px;
+            padding: 0 15px;
             &:hover {
                 background: lighten($ey-default-gray, 4);
             }
