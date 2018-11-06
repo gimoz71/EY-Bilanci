@@ -187,7 +187,7 @@
                     <div class="row no-gutters overflowContainer"> <!-- classe per calcolare l'altezza dei contenitori scrollabili -->
 
                         <!-- blocco home page -->
-                        <div class="welcome">
+                        <div class="welcome d-none">
                             <div class="content">
                                 
                                 <h2 class="welcome-title"> <img class="yellow-frame" src="images/yellow-frame.png"> PAGINA DI BENVENUTO CON EVENTUALI HELP ONLINE</h2>
@@ -200,7 +200,7 @@
                         </div>
 
                         <!-- blocchi di esempio delega multipla -->
-                        <div class="brief-scheda">
+                        <div class="brief-scheda d-none">
                             <div class="info GRI c102">
                                 <div class="nome">
                                     <h2 class="codice">GRI 102-2</h2>
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="brief-scheda">
+                        <div class="brief-scheda d-none">
                             <div class="info GRI c300">
                                 <div class="nome">
                                     <h2 class="codice">GRI 301-3</h2>
@@ -218,7 +218,7 @@
                         </div>
 
                         <!-- form delega -->
-                        <div class="form-delega">
+                        <div class="form-delega d-none">
                             <form>
                                 <div class="singola-delega">
                                     <div class="form-row">
@@ -290,7 +290,198 @@
                             </form>
                         </div>
 
-
+                        <div class="sezione-scheda accordion">
+                            <a href="#collapseExample" class="sezione" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Executives
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <div class="frame" role="tabpanel" data-example-id="togglable-tabs">
+                                    <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
+                                        <li role="presentation">
+                                            <a href="#tab_content1" class="active" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Man</a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a href="#tab_content2" id="profile-tab" role="tab"  data-toggle="tab" aria-expanded="false">Woman</a>
+                                        </li>
+                                    </ul>
+                                    <div id="myTabContent" class="tab-content">
+                                        <div role="tabpanel" class="tab-pane active " id="tab_content1" aria-labelledby="home-tab">
+                                            <table class="table ">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Age</th>
+                                                        <th width="150px">Unit of measure</th>
+                                                        <th width="100px">2018</th>
+                                                        <th width="100px">2017</th>
+                                                        <th width="100px">2016</th>
+                                                        <th width="60px">note</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">
+                                                                < 30 years old</p> </th> <td>
+                                                                    <select id="heard" class="form-control" required="">
+                                                                        <option value="press">n.</option>
+                                                                        <option value="net">kg.</option>
+                                                                        <option value="mouth">mq.</option>
+                                                                    </select>
+                                                                    </td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">30 ≤ x ≤ 50 y.o.</p>
+                                                        </th>
+                                                        <td><select id="heard" class="form-control" required="">
+                                                                <option value="press">n.</option>
+                                                                <option value="net">kg.</option>
+                                                                <option value="mouth">mq.</option>
+                                                            </select></td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">> 50 years old</p>
+                                                        </th>
+                                                        <td><select id="heard" class="form-control" required="">
+                                                                <option value="press">n.</option>
+                                                                <option value="net">kg.</option>
+                                                                <option value="mouth">mq.</option>
+                                                            </select></td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">TOTAL MALE</p>
+                                                        </th>
+                                                        <td>&nbsp;</td>
+                                                        <td><input type="text" class="form-control" readonly="readonly" placeholder="0"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td>&nbsp;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane " id="tab_content2" aria-labelledby="profile-tab">
+                                            <table class="table ">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Age</th>
+                                                        <th width="150px">Unit of measure</th>
+                                                        <th width="100px">2018</th>
+                                                        <th width="100px">2017</th>
+                                                        <th width="100px">2016</th>
+                                                        <th width="60px">note</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">
+                                                                < 30 years old</p> </th> <td>
+                                                                    <select id="heard" class="form-control" required="">
+                                                                        <option value="press">n.</option>
+                                                                        <option value="net">kg.</option>
+                                                                        <option value="mouth">mq.</option>
+                                                                    </select>
+                                                                    </td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button> </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">30 ≤ x ≤ 50 y.o.</p>
+                                                        </th>
+                                                        <td><select id="heard" class="form-control" required="">
+                                                                <option value="press">n.</option>
+                                                                <option value="net">kg.</option>
+                                                                <option value="mouth">mq.</option>
+                                                            </select></td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">> 50 years old</p>
+                                                        </th>
+                                                        <td><select id="heard" class="form-control" required="">
+                                                                <option value="press">n.</option>
+                                                                <option value="net">kg.</option>
+                                                                <option value="mouth">mq.</option>
+                                                            </select></td>
+                                                        <td><input type="text" class="form-control" placeholder=""></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><button type="button" class="btn btn-default" data-toggle="modal"
+                                                                data-target="#modal-lg-1"><i class="fa fa-edit"></i></button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <p class="form-control-static">TOTAL FEMALE</p>
+                                                        </th>
+                                                        <td>&nbsp;</td>
+                                                        <td><input type="text" class="form-control" readonly="readonly" placeholder="0"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td><input type="text" class="form-control light-input" readonly="readonly"
+                                                                placeholder="35"></td>
+                                                        <td>&nbsp;</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <table class="table table-total">
+                                        <tr>
+                                            <th scope="row">
+                                                <p class="form-control-static">TOTAL </p>
+                                            </th>
+                                            <td width="150px">&nbsp;</td>
+                                            <td width="100px"><input type="text" class="form-control" readonly="readonly" placeholder="0"></td>
+                                            <td width="100px"><input type="text" class="form-control light-input" readonly="readonly" placeholder="35"></td>
+                                            <td width="100px"><input type="text" class="form-control light-input" readonly="readonly" placeholder="35"></td>
+                                            <td width="60px">&nbsp;</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

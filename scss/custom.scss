@@ -435,7 +435,8 @@ input[type='checkbox'].undefined:checked + label::before {
         }
     }
     .form-delega {
-        flex: 1;    
+        //flex: 1;
+        width: 100%;
         border: solid 1px $ey-default-gray;
         border-top: 0;
         background: #F8F8F8;
@@ -484,6 +485,82 @@ input[type='checkbox'].undefined:checked + label::before {
             &:before {
                 content: fa-content($fa-var-plus-square);
             }
+        }
+    }
+
+    .sezione-scheda {
+        //flex: 1;    
+        width: 100%;
+        border-top: 0;
+        padding: .3em;
+        background: #fff;
+        margin: 10px;
+        
+        .form-group {
+            margin-bottom: .5em;
+            label {
+                font-size: .9em;
+            }
+        }
+        a {
+            color: #444;
+        }
+        
+
+        .sezione {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            font-size: 1.2em;
+            padding: .5em .7em
+        }
+        .frame {
+            background: #EEEEEE;
+            padding: .7em;
+        }
+
+        ul.bar_tabs {
+            overflow: visible;
+            height: 25px;
+            margin: 3px 0 0 0;
+            padding-left: 14px;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            //border-bottom: 1px solid $ey-default-gray;
+            li {
+                color: #333 !important;
+                margin-left: 8px;
+                border-bottom: none;
+                a {
+                    font-size: 1em;
+                    border: 1px solid $ey-default-gray;;
+                    border-bottom: 0;
+                    padding: 5px 20px 3px 20px;
+                    background: #F5F7FA;
+                    margin: 0;
+                    border-top-right-radius: 0;
+                    &.active {
+                        background: #fff;
+                        background: #fff;
+                        border-bottom: none;
+                        padding: 5px 20px 4px 20px;
+                    }
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            
+            &.right {
+                padding-right: 14px
+            }
+        }
+
+        .tab-content {
+            background: #fff;
+            border: solid 1px $ey-default-gray;
+            border-top: 0;
         }
     }
 }
