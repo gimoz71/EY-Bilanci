@@ -561,6 +561,33 @@ input[type='checkbox'].undefined:checked + label::before {
             background: #fff;
             border: solid 1px $ey-default-gray;
             border-top: 0;
+            border-bottom: 0;
+        }
+
+        .table {
+            text-align: center;
+            margin: 0 !important;
+            input[type='text'] {
+                text-align:center;
+            }
+            tr th:first-of-type {
+                text-align: left;
+            }
+
+            thead th {
+                border-width: 1px;
+            }
+        }
+
+        .feature {
+            font-weight: 400;
+        }
+
+        .table-total {
+            background: lighten($ey-default-gray, 15);
+            border: solid 1px $ey-default-gray;
+            border-top: 0;
+            font-weight: 600;
         }
     }
 }

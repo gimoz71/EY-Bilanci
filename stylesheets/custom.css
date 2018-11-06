@@ -15464,5 +15464,34 @@ input[type='checkbox'].undefined:checked + label::before {
   background: #fff;
   border: solid 1px #ccc;
   border-top: 0;
+  border-bottom: 0;
+}
+
+.col-scheda .sezione-scheda .table {
+  text-align: center;
+  margin: 0 !important;
+}
+
+.col-scheda .sezione-scheda .table input[type='text'] {
+  text-align: center;
+}
+
+.col-scheda .sezione-scheda .table tr th:first-of-type {
+  text-align: left;
+}
+
+.col-scheda .sezione-scheda .table thead th {
+  border-width: 1px;
+}
+
+.col-scheda .sezione-scheda .feature {
+  font-weight: 400;
+}
+
+.col-scheda .sezione-scheda .table-total {
+  background: #f2f2f2;
+  border: solid 1px #ccc;
+  border-top: 0;
+  font-weight: 600;
 }
 /*# sourceMappingURL=custom.css.map */
