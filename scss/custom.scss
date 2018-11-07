@@ -604,6 +604,7 @@ input[type='checkbox'].undefined:checked + label::before {
         padding: .3em;
         background: #fff;
         margin: 10px;
+        margin-bottom: 0;
         
         .form-group {
             margin-bottom: .5em;
@@ -768,6 +769,25 @@ input[type='checkbox'].undefined:checked + label::before {
             color: lighten($ey-default-gray, 0);
             &:before {
                 content: fa-content($fa-var-file-alt);
+            }
+        }
+    }
+    .done {
+        width: 100%;
+        text-align: right;
+        margin: 15px 10px;
+        a {
+            padding: 8px 1.5em;
+            margin-left: 10px;
+            font-size: .8em;
+            color:#444444;
+            background: rgba(255,255,255,1) ;
+            background: $ey-gradient-lighter;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: none;
+                background: #fff;
+                
             }
         }
     }

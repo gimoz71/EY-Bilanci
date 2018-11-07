@@ -18,9 +18,13 @@ $(document).ready(function () {
 
     })
 
-
-
+    
+    
+    
 });
+
+$('.stacktable').stacktable();
+
 $(window).on('resize', function () {
     h = window.innerHeight;
     if (window.innerWidth > 768) {

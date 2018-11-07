@@ -15510,6 +15510,7 @@ input[type='checkbox'].undefined:checked + label::before {
   padding: .3em;
   background: #fff;
   margin: 10px;
+  margin-bottom: 0;
 }
 
 .col-scheda .sezione-scheda .form-group {
@@ -15691,5 +15692,27 @@ input[type='checkbox'].undefined:checked + label::before {
 
 .col-scheda .sezione-scheda .file-icon:before {
   content: "\f15c";
+}
+
+.col-scheda .done {
+  width: 100%;
+  text-align: right;
+  margin: 15px 10px;
+}
+
+.col-scheda .done a {
+  padding: 8px 1.5em;
+  margin-left: 10px;
+  font-size: .8em;
+  color: #444444;
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  text-transform: uppercase;
+}
+
+.col-scheda .done a:hover {
+  text-decoration: none;
+  background: #fff;
 }
 /*# sourceMappingURL=custom.css.map */
