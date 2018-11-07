@@ -10,6 +10,16 @@ $(document).ready(function () {
     } else {
         $('.overflowContainer').css('max-height', 'none')
     }
+
+    $(document).on('click', '.sezione', function () {
+        $(this).find('.fas').toggleClass('fa-chevron-down fa-chevron-up')
+        //Hide the other panels
+        //$(".accordion-content").not($(this).next()).slideUp('fast');
+
+    })
+
+
+
 });
 $(window).on('resize', function () {
     h = window.innerHeight;

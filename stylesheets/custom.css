@@ -9525,6 +9525,7 @@ a.text-dark:hover, a.text-dark:focus {
 .brief-scheda .info .stato .action .action-icon,
 .far,
 .col-scheda .form-delega .add-icon,
+.col-scheda .sezione-scheda .file-icon,
 .fal,
 .fab {
   -moz-osx-font-smoothing: grayscale;
@@ -9536,7 +9537,7 @@ a.text-dark:hover, a.text-dark:focus {
   line-height: 1;
 }
 
-.brief-scheda .info .stato .action .action-icon, .col-scheda .form-delega .add-icon {
+.brief-scheda .info .stato .action .action-icon, .col-scheda .form-delega .add-icon, .col-scheda .sezione-scheda .file-icon {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline-block;
@@ -9643,6 +9644,7 @@ a.text-dark:hover, a.text-dark:focus {
 .brief-scheda .info .stato .action .fa-pull-left.action-icon,
 .far.fa-pull-left,
 .col-scheda .form-delega .fa-pull-left.add-icon,
+.col-scheda .sezione-scheda .fa-pull-left.file-icon,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: .3em;
@@ -9653,6 +9655,7 @@ a.text-dark:hover, a.text-dark:focus {
 .brief-scheda .info .stato .action .fa-pull-right.action-icon,
 .far.fa-pull-right,
 .col-scheda .form-delega .fa-pull-right.add-icon,
+.col-scheda .sezione-scheda .fa-pull-right.file-icon,
 .fal.fa-pull-right,
 .fab.fa-pull-right {
   margin-left: .3em;
@@ -14855,7 +14858,8 @@ readers do not read off random characters that represent icons */
 
 
 .far,
-.col-scheda .form-delega .add-icon {
+.col-scheda .form-delega .add-icon,
+.col-scheda .sezione-scheda .file-icon {
   font-family: 'Font Awesome 5 Free';
   font-weight: 400;
 }
@@ -15017,6 +15021,12 @@ input[type='checkbox'].undefined:checked + label::before {
   border-top-width: 8px;
   border-bottom-width: 8px;
   background: #FFDB00;
+}
+
+.collapsing {
+  -webkit-transition: none;
+  transition: none;
+  display: none;
 }
 
 .no-margin {
@@ -15310,7 +15320,8 @@ input[type='checkbox'].undefined:checked + label::before {
 
 .col-scheda .info .nome {
   border-top: solid 1px #fff;
-  padding: 4px 8px;
+  padding: 10px 8px;
+  position: relative;
 }
 
 .col-scheda .info .nome .codice {
@@ -15325,6 +15336,25 @@ input[type='checkbox'].undefined:checked + label::before {
   font-size: 1em;
   line-height: 1em;
   margin: 0;
+}
+
+.col-scheda .info .nome:before, .col-scheda .info .nome:after {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  z-index: 5;
+  right: 30px;
+}
+
+.col-scheda .info .nome:before {
+  bottom: -23px;
+  border-color: #ccc transparent transparent;
+}
+
+.col-scheda .info .nome:after {
+  bottom: -22px;
+  border-color: #E6E6E6 transparent transparent;
 }
 
 .col-scheda .form-delega {
@@ -15386,6 +15416,66 @@ input[type='checkbox'].undefined:checked + label::before {
   content: "\f0fe";
 }
 
+.col-scheda .delega-utente {
+  width: 100%;
+  border: solid 1px #ccc;
+  border-top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: .8em;
+  position: relative;
+}
+
+.col-scheda .delega-utente:before, .col-scheda .delega-utente:after {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  z-index: 5;
+  left: 11px;
+}
+
+.col-scheda .delega-utente:before {
+  bottom: -20px;
+  border-color: #ccc transparent transparent;
+}
+
+.col-scheda .delega-utente:after {
+  bottom: -19px;
+  border-color: #F5F5F5 transparent transparent;
+}
+
+.col-scheda .delega-utente .utente {
+  margin: 0;
+  margin-left: 20px;
+  position: relative;
+}
+
+.col-scheda .delega-utente .utente:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #999;
+  border-radius: 50%;
+  left: -22px;
+  top: 6px;
+}
+
+.col-scheda .delega-utente.last {
+  font-weight: 600;
+}
+
+.col-scheda .delega-utente.last:before, .col-scheda .delega-utente.last:after {
+  display: none;
+}
+
+.col-scheda .delega-utente.last .utente:before {
+  background: #666;
+}
+
 .col-scheda .sezione-scheda {
   width: 100%;
   border-top: 0;
@@ -15409,14 +15499,41 @@ input[type='checkbox'].undefined:checked + label::before {
 .col-scheda .sezione-scheda .sezione {
   display: inline-block;
   margin: 0;
-  padding: 0;
+  width: 100%;
   font-size: 1.2em;
   padding: .5em .7em;
+  position: relative;
+}
+
+.col-scheda .sezione-scheda .sezione:hover {
+  text-decoration: none;
+}
+
+.col-scheda .sezione-scheda .sezione .chevron {
+  position: absolute;
+  right: 1em;
+  color: #d9d9d9;
+}
+
+.col-scheda .sezione-scheda .sezione .status {
+  position: absolute;
+  right: 4.5em;
+  font-size: .7em;
+  line-height: 1em;
+  margin-top: 0.6em;
+  padding-right: .7em;
+  font-weight: 100;
+}
+
+.col-scheda .sezione-scheda .sezione .status.undone {
+  color: #c00;
+  border-right: solid 1em #c00;
 }
 
 .col-scheda .sezione-scheda .frame {
   background: #EEEEEE;
   padding: .7em;
+  margin-top: .3em;
 }
 
 .col-scheda .sezione-scheda ul.bar_tabs {
@@ -15482,6 +15599,49 @@ input[type='checkbox'].undefined:checked + label::before {
 
 .col-scheda .sezione-scheda .table thead th {
   border-width: 1px;
+  font-weight: 400;
+}
+
+.col-scheda .sezione-scheda .table .info-area td {
+  padding: 3px;
+  margin: 0;
+  border: 0;
+  position: relative;
+}
+
+.col-scheda .sezione-scheda .table .info-area td:before, .col-scheda .sezione-scheda .table .info-area td:after {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+}
+
+.col-scheda .sezione-scheda .table .info-area td:before {
+  top: -15px;
+  right: 20px;
+  border-color: transparent transparent #ccc;
+}
+
+.col-scheda .sezione-scheda .table .info-area td:after {
+  top: -14px;
+  right: 20px;
+  border-color: transparent transparent #f7f7f7;
+}
+
+.col-scheda .sezione-scheda .table .info-area td .area {
+  width: 100%;
+  border-color: #ccc;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  padding: .8em;
+  font-size: .8em;
+}
+
+.col-scheda .sezione-scheda .table .info-area td a {
+  font-size: .8em;
+  padding: 3px 1em;
+  color: #444444;
 }
 
 .col-scheda .sezione-scheda .feature {
@@ -15493,5 +15653,15 @@ input[type='checkbox'].undefined:checked + label::before {
   border: solid 1px #ccc;
   border-top: 0;
   font-weight: 600;
+}
+
+.col-scheda .sezione-scheda .file-icon {
+  vertical-align: middle;
+  font-size: 1.3em;
+  color: #cccccc;
+}
+
+.col-scheda .sezione-scheda .file-icon:before {
+  content: "\f15c";
 }
 /*# sourceMappingURL=custom.css.map */

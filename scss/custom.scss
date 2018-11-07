@@ -22,6 +22,7 @@ $fa-font-path:"../webfonts";
 
 $ey-gradient-dark: linear-gradient(#383838, #000);
 $ey-gradient-light: linear-gradient(#FAFAFA, #E6E6E6);
+$ey-gradient-lighter: linear-gradient(#ffffff, #F5F5F5);
 $ey-default-yellow: #FFDB00;
 $ey-default-gray: #ccc;
 
@@ -157,6 +158,12 @@ input[type='checkbox'].undefined:checked + label::before {
     background: $ey-default-yellow;
 }
 
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
 
 
 //--------------------------------
@@ -368,6 +375,8 @@ input[type='checkbox'].undefined:checked + label::before {
     border-bottom: solid 1px  $ey-default-gray;
 }
 
+
+
 // scheda
 .col-scheda {
     background: #E0E0E0;
@@ -418,7 +427,8 @@ input[type='checkbox'].undefined:checked + label::before {
         }
         .nome {
             border-top: solid 1px #fff;
-            padding: 4px 8px;
+            padding: 10px 8px;
+            position: relative;
             .codice {
                 font-size: 2.3em;
                 line-height: 1em;
@@ -431,7 +441,24 @@ input[type='checkbox'].undefined:checked + label::before {
                 line-height: 1em; 
                 margin: 0;
             }
+            &:before, &:after {
+                content: "";
+                position :absolute;
+                border-width: 10px;
+                border-style: solid;
+                z-index: 5;
+                right: 30px;
+            }
+            &:before {
+                bottom: -23px;
+                border-color: $ey-default-gray transparent transparent ;
 
+            }
+            &:after {
+                bottom: -22px;
+                border-color: #E6E6E6 transparent transparent ;
+
+            }
         }
     }
     .form-delega {
@@ -488,6 +515,64 @@ input[type='checkbox'].undefined:checked + label::before {
         }
     }
 
+    .delega-utente {
+        width: 100%;
+        border: solid 1px $ey-default-gray;
+        border-top: 0;
+        background: $ey-gradient-lighter;
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: .8em; 
+        position: relative;
+
+        &:before, &:after {
+            content: "";
+            position :absolute;
+            border-width: 10px;
+            border-style: solid;
+            z-index: 5;
+            left: 11px;
+        }
+        &:before {
+            bottom: -20px;
+            border-color: $ey-default-gray transparent transparent ;
+
+        }
+        &:after {
+            bottom: -19px;
+            border-color: #F5F5F5 transparent transparent ;
+
+        }
+
+        .utente {
+            margin:0;
+            margin-left: 20px;
+            position: relative;
+            &:before {
+                content:"";
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: #999;
+                border-radius: 50%;
+                left: -22px;
+                top:6px;
+
+            }
+        }
+        &.last {
+            font-weight: 600;
+            &:before, &:after {
+                display: none;
+            }
+            .utente {
+                &:before {
+                    background: #666;
+                }
+            }
+        }
+    }
+
     .sezione-scheda {
         //flex: 1;    
         width: 100%;
@@ -510,13 +595,36 @@ input[type='checkbox'].undefined:checked + label::before {
         .sezione {
             display: inline-block;
             margin: 0;
-            padding: 0;
+            width: 100%;
             font-size: 1.2em;
-            padding: .5em .7em
+            padding: .5em .7em;
+            position: relative;
+            &:hover {
+                text-decoration: none;
+            }
+            .chevron {
+                position: absolute;
+                right: 1em;
+                color: lighten($ey-default-gray, 5);
+            }
+            .status {
+                position: absolute;
+                right: 4.5em;
+                font-size: .7em;
+                line-height: 1em;
+                margin-top: 0.6em;
+                padding-right: .7em;
+                font-weight: 100;
+                &.undone {
+                    color: #c00;
+                    border-right: solid 1em #c00;
+                }
+            }
         }
         .frame {
             background: #EEEEEE;
             padding: .7em;
+            margin-top: .3em;
         }
 
         ul.bar_tabs {
@@ -576,6 +684,44 @@ input[type='checkbox'].undefined:checked + label::before {
 
             thead th {
                 border-width: 1px;
+                font-weight: 400;
+            }
+            .info-area td {
+                padding: 3px;
+                margin: 0;
+                border: 0;
+                position: relative;
+                &:before, &:after {
+                    content: "";
+                    position :absolute;
+                    border-width: 10px;
+                    border-style: solid;
+                }
+                &:before {
+                    top: -15px;
+                    right: 20px;
+                    border-color: transparent transparent $ey-default-gray;
+
+                }
+                &:after {
+                    top: -14px;
+                    right: 20px;
+                    border-color: transparent transparent #f7f7f7;
+
+                }
+                .area {
+                    width: 100%;
+                    border-color: $ey-default-gray;
+                    box-shadow: inset 1px 1px 2px rgba(0,0,0,.1);
+                    background-color: #f7f7f7;
+                    padding: .8em;
+                    font-size: .8em;
+                }
+                a {
+                    font-size: .8em;
+                    padding: 3px 1em;
+                    color:#444444;
+                }
             }
         }
 
@@ -588,6 +734,17 @@ input[type='checkbox'].undefined:checked + label::before {
             border: solid 1px $ey-default-gray;
             border-top: 0;
             font-weight: 600;
+        }
+
+        .file-icon {
+            @extend %fa-icon;
+            @extend .far;
+            vertical-align: middle;
+            font-size: 1.3em;
+            color: lighten($ey-default-gray, 0);
+            &:before {
+                content: fa-content($fa-var-file-alt);
+            }
         }
     }
 }

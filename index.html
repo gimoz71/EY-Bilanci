@@ -6,8 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="stylesheets/custom.css">
     <title>EY</title>
@@ -38,9 +37,7 @@
                         </div>
                         <div class="row no-gutters">
                             <div class="col-sm-12 filtri">
-                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label
-                                        for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a
-                                        href="#" class="action">accetta</a> <a href="#" class="action">delega</a></span>
+                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a href="#" class="action">accetta</a> <a href="#" class="action">delega</a></span>
                             </div>
                         </div>
                     </div>
@@ -182,8 +179,8 @@
                             
                             -->
                             <!-- titolo scheda (d-none la nasconde) -->
-                            <div class="info GRI c200 d-none">
-                                <div class="nome d-none">
+                            <div class="info GRI c200">
+                                <div class="nome ">
                                     <h2 class="codice">GRI 201-2</h2>
                                     <p class="descrizione">Financial implications and other risks and opportunities due
                                         to...</p>
@@ -196,7 +193,7 @@
                             </div>
 
                             <!-- titolo home () -->
-                            <div class="info GRI ey-color ">
+                            <div class="info GRI ey-color d-none">
                                 <h2 class="titolo">EY Bilanci Sostenibilità</h2>
                             </div>
                         </div>
@@ -250,18 +247,15 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="nome">Nome</label>
-                                            <input type="text" class="form-control form-control-sm" id="nome"
-                                                placeholder="Nome">
+                                            <input type="text" class="form-control form-control-sm" id="nome" placeholder="Nome">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="cognome">Password</label>
-                                            <input type="text" class="form-control form-control-sm" id="cognome"
-                                                placeholder="Cognome">
+                                            <input type="text" class="form-control form-control-sm" id="cognome" placeholder="Cognome">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="email">Password</label>
-                                            <input type="email" class="form-control form-control-sm" id="email"
-                                                placeholder="Email">
+                                            <input type="email" class="form-control form-control-sm" id="email" placeholder="Email">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="form-control">Nome Societ&agrave;</label>
@@ -285,18 +279,15 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="nome">Nome</label>
-                                            <input type="text" class="form-control form-control-sm" id="nome"
-                                                placeholder="Nome">
+                                            <input type="text" class="form-control form-control-sm" id="nome" placeholder="Nome">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="cognome">Password</label>
-                                            <input type="text" class="form-control form-control-sm" id="cognome"
-                                                placeholder="Cognome">
+                                            <input type="text" class="form-control form-control-sm" id="cognome" placeholder="Cognome">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="email">Password</label>
-                                            <input type="email" class="form-control form-control-sm" id="email"
-                                                placeholder="Email">
+                                            <input type="email" class="form-control form-control-sm" id="email" placeholder="Email">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="form-control">Nome Societ&agrave;</label>
@@ -317,27 +308,35 @@
                                     </div>
                                 </div>
                                 <div class="singola-delega">
-                                    <span class="add"><a href="#"><i class="add-icon"></i> aggiungi</a></span><span
-                                        class="submit float-right"><a href="#">annulla</a><a href="#">invia</a></span>
+                                    <span class="add"><a href="#"><i class="add-icon"></i> aggiungi</a></span><span class="submit float-right"><a href="#">annulla</a><a href="#">invia</a></span>
                                 </div>
                             </form>
                         </div>
 
+
+
+                        <div class="delega-utente">
+                            <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
+                        </div>
+                        <div class="delega-utente">
+                            <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
+                        </div>
+                        <div class="delega-utente last">
+                            <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
+                        </div>
+
                         <div class="sezione-scheda accordion">
-                            <a href="#collapseExample" class="sezione" data-toggle="collapse" role="button"
-                                aria-expanded="false" aria-controls="collapseExample">
-                                Executives
+                            <a href="#tab1" class="sezione" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="tab1">
+                                <span>Executives</span><span class="status undone">da completare</span><span class="chevron"><i class="fas fa-chevron-down"></i></span>
                             </a>
-                            <div class="collapse" id="collapseExample">
+                            <div class="collapse" id="tab1">
                                 <div class="frame" role="tabpanel" data-example-id="togglable-tabs">
                                     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                                         <li role="presentation">
-                                            <a href="#tab_content1" class="active" id="home-tab" role="tab" data-toggle="tab"
-                                                aria-expanded="true">Man</a>
+                                            <a href="#tab_content1" class="active" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Man</a>
                                         </li>
                                         <li role="presentation">
-                                            <a href="#tab_content2" id="profile-tab" role="tab" data-toggle="tab"
-                                                aria-expanded="false">Woman</a>
+                                            <a href="#tab_content2" id="profile-tab" role="tab" data-toggle="tab" aria-expanded="false">Woman</a>
                                         </li>
                                     </ul>
                                     <div id="myTabContent" class="tab-content">
@@ -359,68 +358,62 @@
                                                             <p class="form-control-plaintext form-control-sm feature">&lt; 30 years old</p>
                                                         </th>
                                                         <td>
-                                                            <select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                            <select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
                                                             </select>
                                                         </td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a></td>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" data-target="#targetElement1" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                    </tr>
+                                                    <tr class="info-area text-right collapse" id="targetElement1">
+                                                        <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">30 &le; x &ge; 50 y.o.</p>
                                                         </th>
-                                                        <td><select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                        <td><select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
                                                             </select></td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a></td>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" data-target="#targetElement2" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                    </tr>
+                                                    <tr class="info-area text-right collapse" id="targetElement2">
+                                                        <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">&gt; 50 years old</p>
                                                         </th>
-                                                        <td><select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                        <td><select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
                                                             </select></td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a></td>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" data-target="#targetElement3" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                    </tr>
+                                                    <tr class="info-area text-right collapse" id="targetElement3">
+                                                        <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">TOTAL MALE</p>
                                                         </th>
                                                         <td>&nbsp;</td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm"
-                                                                readonly="readonly" placeholder="0"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="0"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td>&nbsp;</td>
                                                     </tr>
                                                 </tbody>
@@ -444,69 +437,56 @@
                                                             <p class="form-control-plaintext form-control-sm feature">&lt; 30 years old</p>
                                                         </th>
                                                         <td>
-                                                            <select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                            <select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
                                                             </select>
                                                         </td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm"
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="file-icon"></i></a>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">30 &le; x &ge; 50 y.o.</p>
                                                         </th>
-                                                        <td><select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                        <td><select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
                                                             </select></td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a></td>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="file-icon"></i></a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">&gt; 50 years old</p>
                                                         </th>
-                                                        <td><select id="heard" class="form-control form-control-sm"
-                                                                required="">
+                                                        <td>
+                                                            <select id="heard" class="form-control form-control-sm" required="">
                                                                 <option value="press">n.</option>
                                                                 <option value="net">kg.</option>
                                                                 <option value="mouth">mq.</option>
-                                                            </select></td>
-                                                        <td><input type="text" class="form-control form-control-sm"
-                                                                placeholder=""></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="far fa-file-alt"></i></a></td>
+                                                            </select>
+                                                        </td>
+                                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><a href="#" class="form-control-plaintext form-control-sm"><i class="file-icon"></i></a></td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">
                                                             <p class="form-control-plaintext form-control-sm feature">TOTAL FEMALE</p>
                                                         </th>
                                                         <td>&nbsp;</td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm"
-                                                                readonly="readonly" placeholder="0"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
-                                                        <td><input type="text" class="form-control-plaintext form-control-sm "
-                                                                readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="0"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                                        <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td>&nbsp;</td>
                                                     </tr>
                                                 </tbody>
@@ -519,18 +499,30 @@
                                                 <p class="form-control-plaintext form-control-sm feature">TOTAL </p>
                                             </th>
                                             <td width="150px">&nbsp;</td>
-                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm"
-                                                    readonly="readonly" placeholder="0"></td>
-                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm"
-                                                    readonly="readonly" placeholder="35"></td>
-                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm "
-                                                    readonly="readonly" placeholder="35"></td>
+                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="0"></td>
+                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="35"></td>
+                                            <td width="100px"><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                             <td width="60px">&nbsp;</td>
                                         </tr>
                                     </table>
-                                </div>
 
+                                </div>
+                                
                             </div>
+                        </div>
+                        <div class="sezione-scheda">
+                            <table class="table table-total">
+                                <tr>
+                                    <th scope="row">
+                                        <p class="form-control-plaintext form-control-sm feature">TOTAL </p>
+                                    </th>
+                                    <td width="150px">&nbsp;</td>
+                                    <td width="100px"><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="0"></td>
+                                    <td width="100px"><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="35"></td>
+                                    <td width="100px"><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
+                                    <td width="60px">&nbsp;</td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -540,12 +532,9 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script src="javascripts/custom.js"></script>
 </body>
