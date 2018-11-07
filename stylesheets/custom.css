@@ -15715,4 +15715,49 @@ input[type='checkbox'].undefined:checked + label::before {
   text-decoration: none;
   background: #fff;
 }
+
+.stacktable {
+  width: 100%;
+}
+
+.st-head-row {
+  padding-top: 1em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  font-weight: 500;
+}
+
+.st-head-row.st-head-row-main {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.st-key {
+  width: 49%;
+  text-align: right;
+  padding-right: 1%;
+}
+
+.st-val {
+  width: 49%;
+  padding-left: 1%;
+}
+
+/* RESPONSIVE EXAMPLE */
+.stacktable.large-only {
+  display: table;
+}
+
+.stacktable.small-only {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .stacktable.large-only {
+    display: none;
+  }
+  .stacktable.small-only {
+    display: table;
+  }
+}
 /*# sourceMappingURL=custom.css.map */

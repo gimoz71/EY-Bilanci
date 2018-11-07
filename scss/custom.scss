@@ -792,3 +792,22 @@ input[type='checkbox'].undefined:checked + label::before {
         }
     }
 }
+
+
+.stacktable { width: 100%; }
+.st-head-row { padding-top: 1em; background: $ey-gradient-lighter; font-weight: 500}
+.st-head-row.st-head-row-main { font-size: 1.2em; font-weight: 400}
+.st-key { width: 49%; text-align: right; padding-right: 1%; }
+.st-val { width: 49%; padding-left: 1%; }
+
+
+
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@media (max-width: 960px) {
+  .stacktable.large-only { display: none; }
+  .stacktable.small-only { display: table; }
+}
