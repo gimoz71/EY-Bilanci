@@ -15291,6 +15291,7 @@ input[type='checkbox'].undefined:checked + label::before {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  position: relative;
 }
 
 .col-scheda .info .titolo {
@@ -15355,6 +15356,33 @@ input[type='checkbox'].undefined:checked + label::before {
 .col-scheda .info .nome:after {
   bottom: -22px;
   border-color: #E6E6E6 transparent transparent;
+}
+
+.col-scheda .info .tool {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.col-scheda .info .tool .icon-help, .col-scheda .info .tool .icon-deleghe {
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  padding: 10px;
+  margin: 0 10px;
+  opacity: .7;
+}
+
+.col-scheda .info .tool .icon-help:hover, .col-scheda .info .tool .icon-deleghe:hover {
+  opacity: 1;
+}
+
+.col-scheda .info .tool .icon-help {
+  background: url(../images/icon-help.png) no-repeat center center;
+}
+
+.col-scheda .info .tool .icon-deleghe {
+  background: url(../images/icon-deleghe.png) no-repeat center center;
 }
 
 .col-scheda .form-delega {

@@ -402,6 +402,7 @@ input[type='checkbox'].undefined:checked + label::before {
         height: 60px;
         min-height: 0;
         flex: 1; // rende fluida la larghezza
+        position: relative;
         .titolo {
             font-size: 2.6em;
             padding: 0 8px;
@@ -458,6 +459,29 @@ input[type='checkbox'].undefined:checked + label::before {
                 bottom: -22px;
                 border-color: #E6E6E6 transparent transparent ;
 
+            }
+        }
+
+        .tool {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            .icon-help, .icon-deleghe {
+                display: inline-block;
+                height: 26px;
+                width: 26px;
+                padding: 10px;
+                margin: 0 10px;
+                opacity: .7;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .icon-help {
+                background: url(../images/icon-help.png) no-repeat center center;
+            }
+            .icon-deleghe {
+                background: url(../images/icon-deleghe.png) no-repeat center center;
             }
         }
     }
