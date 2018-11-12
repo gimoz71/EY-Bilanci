@@ -38,7 +38,7 @@
                         </div>
                         <div class="row no-gutters">
                             <div class="col-sm-12 filtri">
-                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a href="#" class="action">accetta</a> <a href="#" class="action">delega</a></span>
+                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a href="#" class="action accetta">accetta</a> <a href="#" class="action delega">delega</a></span>
                             </div>
                         </div>
                     </div>
@@ -181,6 +181,7 @@
                             -->
                             <!-- titolo scheda (d-none la nasconde) -->
                             <div class="info GRI c200">
+                                <div class="reopen-list fas fa-angle-double-left d-none" id="reopen-list"></div>
                                 <div class="nome">
                                     <h2 class="codice">GRI 201-2</h2>
                                     <p class="descrizione">Financial implications and other risks and opportunities due  to...</p>
@@ -371,9 +372,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement1" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement1" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement1">
+                                                    <tr class="info-area text-right collapse targetElement1">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -388,9 +389,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement2" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement2" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement2">
+                                                    <tr class="info-area text-right collapse targetElement2">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -405,9 +406,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement3" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement3" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement3">
+                                                    <tr class="info-area text-right collapse targetElement3">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -450,9 +451,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement4" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement4" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement4">
+                                                    <tr class="info-area text-right collapse targetElement4">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -467,9 +468,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement5" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement5" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement5">
+                                                    <tr class="info-area text-right collapse targetElement5">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -486,9 +487,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target="#targetElement6" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target=".targetElement6" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse" id="targetElement6">
+                                                    <tr class="info-area text-right collapse targetElement6">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>

@@ -15264,6 +15264,13 @@ input[type='checkbox'].undefined:checked + label::before {
   background: #E0E0E0;
 }
 
+.col-scheda.col-full {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+
 .col-scheda .brief-scheda {
   line-height: 60px;
   border-bottom: solid 1px #ccc;
@@ -15282,6 +15289,24 @@ input[type='checkbox'].undefined:checked + label::before {
   font-size: .7em;
   background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E6E6E6));
   background: linear-gradient(#FAFAFA, #E6E6E6);
+}
+
+.col-scheda .reopen-list {
+  float: left;
+  font-size: 1.75em;
+  color: rgba(129, 129, 129, 0.7);
+  line-height: 60px;
+  padding: 0 10px;
+  border: none;
+  border-right: solid 1px #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+
+.col-scheda .reopen-list:hover {
+  color: #818181;
 }
 
 .col-scheda .info {
