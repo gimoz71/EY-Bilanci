@@ -813,6 +813,88 @@ input[type='checkbox'].undefined:checked + label::before {
             }
         }
     }
+
+    // elementi grafico
+
+    .graph-canvas {
+        height: 600px;
+        width: 100%;
+        margin: 0 10px;
+        border: solid 1px #ccc;
+        border-top: 0;
+        background: #F8F8F8;
+    }
+    .modulo-grafico {
+        position: absolute;
+        box-shadow:  4px 4px 0px rgba(0,0,0,.1);
+        .elemento-grafico {
+            width: 100%;
+            border: solid 1px $ey-default-gray;
+            border-bottom: 0;
+            background: #fff;
+            &:last-of-type {
+                border-bottom: solid 1px $ey-default-gray;
+            }
+            &.title {
+                background: $ey-gradient-lighter;
+                font-weight: 600;
+                padding: 8px 12px;
+                font-size: .9em; 
+                .item {
+                    margin-left: 0;
+                }
+            }
+            margin: 0;
+            padding: 10px 20px;
+            font-size: .7em; 
+            position: relative;
+
+
+            .item {
+                margin:0;
+                margin-left: 16px;
+                position: relative;
+                &:before {
+                    content:"";
+                    position: absolute;
+                    width: 15px;
+                    height: 16px;
+                    left: -25px;
+                    top:0px;
+                }
+                &.user {
+                    &:before {
+                        background: url(../images/user-small.png) no-repeat center center;
+                    }
+                }
+                &.perc {
+                    .perc-container {
+                        border: solid 1px #ccc;
+                        width: 100%;
+                        display: block;
+                        
+                        span {
+                            margin: 2px;
+                            display: block;
+                            height: 14px;
+                            &.low {
+                                background: #D90000;
+                            }
+                            &.med {
+                                background: #FF9326;
+                            }
+                            &.hight {
+                                background: #00D900;
+                            }
+                        }
+                    }
+                    &:before {
+                        background: url(../images/perc-small.png) no-repeat center center;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

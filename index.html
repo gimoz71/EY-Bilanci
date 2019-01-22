@@ -37,7 +37,7 @@
                         </div>
                         <div class="row no-gutters">
                             <div class="col-sm-12 filtri">
-                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a href="#" class="action accetta">accetta</a> <a href="#" class="action delega">delega</a></span>
+                                <div class="selettore"><input type="checkbox" id="selection" class="undefined" checked><label for="selection"></label></div><label for="selection">seleziona</label> <span id="actions"><a href="#" class="action">accetta</a> <a href="#" class="action">delega</a></span>
                             </div>
                         </div>
                     </div>
@@ -180,7 +180,6 @@
                             -->
                             <!-- titolo scheda (d-none la nasconde) -->
                             <div class="info GRI c200">
-                                <div class="reopen-list fas fa-angle-double-left d-none" id="reopen-list"></div>
                                 <div class="nome">
                                     <h2 class="codice">GRI 201-2</h2>
                                     <p class="descrizione">Financial implications and other risks and opportunities due  to...</p>
@@ -317,19 +316,20 @@
                             </form>
                         </div>
 
+                        <!-- riepilogo delega -->
 
-
-                        <div class="delega-utente">
+                        <div class="delega-utente d-none">
                             <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
                         </div>
-                        <div class="delega-utente">
+                        <div class="delega-utente d-none">
                             <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
                         </div>
-                        <div class="delega-utente last">
+                        <div class="delega-utente last d-none">
                             <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
                         </div>
 
-                        <div class="sezione-scheda accordion">
+                        <!-- Sezione scheda e propria -->
+                        <div class="sezione-scheda accordion d-none">
                             <a href="#tab1" class="sezione" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="tab1">
                                 <span>Executives</span><span class="status undone">da completare</span><span class="chevron"><i class="fas fa-chevron-down"></i></span>
                             </a>
@@ -371,9 +371,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement1" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement1" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement1">
+                                                    <tr class="info-area text-right collapse" id="targetElement1">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -388,9 +388,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement2" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement2" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement2">
+                                                    <tr class="info-area text-right collapse" id="targetElement2">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -405,9 +405,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement3" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement3" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement3">
+                                                    <tr class="info-area text-right collapse" id="targetElement3">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -450,9 +450,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm" readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement4" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement4" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement4">
+                                                    <tr class="info-area text-right collapse" id="targetElement4">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -467,9 +467,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement5" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement5" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement5">
+                                                    <tr class="info-area text-right collapse" id="targetElement5">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -486,9 +486,9 @@
                                                         <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
                                                         <td><input type="text" class="form-control-plaintext form-control-sm " readonly="readonly" placeholder="35"></td>
-                                                        <td><a href="#" data-target=".targetElement6" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
+                                                        <td><a href="#" data-target="#targetElement6" data-toggle="collapse" class="form-control-plaintext form-control-sm info-button"><i class="file-icon"></i></a></td>
                                                     </tr>
-                                                    <tr class="info-area text-right collapse targetElement6">
+                                                    <tr class="info-area text-right collapse" id="targetElement6">
                                                         <td colspan="6"><textarea class="area"></textarea><a href="#">annulla</a><a href="#">salva</a></td>
                                                     </tr>
                                                     <tr>
@@ -522,7 +522,7 @@
                                 
                             </div>
                         </div>
-                        <div class="sezione-scheda">
+                        <div class="sezione-scheda d-none">
                             <table class="table table-total">
                                 <tr>
                                     <th scope="row">
@@ -536,8 +536,54 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="done">
+                        <div class="done d-none">
                             <a href="#">annulla</a><a href="#">salva</a>
+                        </div>
+
+                        <!-- elementi grafico -->
+                        <div class="graph-canvas">
+                            <div class="modulo-grafico" style="top: 100px; left: 200px;">
+                                <div class="elemento-grafico title">
+                                    <p class="item ">Società X - Stabilimento Y</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">10:24 2 ottobre 2018</p>
+                                </div>
+                                <div class="elemento-grafico  last">
+                                    <p class="item perc"><span class="perc-container"><span class="low" style="width: 20%;"></span></span></p>
+                                </div>
+                            </div>
+                            <div class="modulo-grafico" style="top: 300px; left: 200px;">
+                                <div class="elemento-grafico title">
+                                    <p class="item ">Società X - Stabilimento Y</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">10:24 2 ottobre 2018</p>
+                                </div>
+                                <div class="elemento-grafico  last">
+                                    <p class="item perc"><span class="perc-container"><span class="med" style="width: 50%;"></span></span></p>
+                                </div>
+                            </div>
+                            <div class="modulo-grafico" style="top: 100px; left: 500px;">
+                                <div class="elemento-grafico title">
+                                    <p class="item ">Società X - Stabilimento Y</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                </div>
+                                <div class="elemento-grafico">
+                                    <p class="item user">10:24 2 ottobre 2018</p>
+                                </div>
+                                <div class="elemento-grafico  last">
+                                    <p class="item perc"><span class="perc-container"><span class="hight" style="width: 90%;"></span></span></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
