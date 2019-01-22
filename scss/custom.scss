@@ -807,7 +807,7 @@ input[type='checkbox'].undefined:checked + label::before {
 .stacktable.large-only { display: table; }
 .stacktable.small-only { display: none; }
 
-@media (max-width: 960px) {
+@media (max-width: 1150px) {
   .stacktable.large-only { display: none; }
   .stacktable.small-only { display: table; }
 }

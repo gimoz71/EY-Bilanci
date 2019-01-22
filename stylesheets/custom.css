@@ -15752,7 +15752,7 @@ input[type='checkbox'].undefined:checked + label::before {
   display: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1150px) {
   .stacktable.large-only {
     display: none;
   }
