@@ -380,6 +380,11 @@ input[type='checkbox'].undefined:checked + label::before {
 // scheda
 .col-scheda {
     background: #E0E0E0;
+
+    &.col-full {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
     .brief-scheda {
         //height: 60px;
         line-height: 60px;
@@ -396,6 +401,23 @@ input[type='checkbox'].undefined:checked + label::before {
     .scheda-header {
         font-size: .7em;
         background: $ey-gradient-light;
+    }
+
+    .reopen-list {
+        float: left;
+        font-size: 1.75em;
+        color: rgba(#818181, .7);
+        line-height: 60px;
+        padding:  0 10px;
+        border: none;
+        border-right: solid 1px $ey-default-gray;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+        z-index: 5;
+        &:hover {
+            color: rgba(#818181, 1);
+        }
     }
     .info {
         line-height: 60px;
