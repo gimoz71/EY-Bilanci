@@ -14899,6 +14899,12 @@ select {
   overflow: auto;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .logo {
   font: 0/0 a;
   color: transparent;
@@ -15389,7 +15395,7 @@ input[type='checkbox'].undefined:checked + label::before {
   top: 10px;
 }
 
-.col-scheda .info .tool .icon-help, .col-scheda .info .tool .icon-deleghe {
+.col-scheda .info .tool .icon-help, .col-scheda .info .tool .icon-deleghe, .col-scheda .info .tool .icon-chat {
   display: inline-block;
   height: 26px;
   width: 26px;
@@ -15398,7 +15404,7 @@ input[type='checkbox'].undefined:checked + label::before {
   opacity: .7;
 }
 
-.col-scheda .info .tool .icon-help:hover, .col-scheda .info .tool .icon-deleghe:hover {
+.col-scheda .info .tool .icon-help:hover, .col-scheda .info .tool .icon-deleghe:hover, .col-scheda .info .tool .icon-chat:hover {
   opacity: 1;
 }
 
@@ -15743,6 +15749,87 @@ input[type='checkbox'].undefined:checked + label::before {
 .col-scheda .done a:hover {
   text-decoration: none;
   background: #fff;
+}
+
+.col-scheda .chat {
+  margin: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.col-scheda .chat .input-area {
+  width: 100%;
+  border: solid 1px #ccc;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  padding: 10px;
+}
+
+.col-scheda .chat .input-area .area {
+  width: 100%;
+  border-color: #ccc;
+  -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  padding: .8em;
+  font-size: .8em;
+}
+
+.col-scheda .chat .input-area a {
+  font-size: .8em;
+  padding: 3px 1em;
+  color: #444444;
+}
+
+.col-scheda .chat-element {
+  margin-bottom: 10px;
+  width: 100%;
+  display: inline-block;
+}
+
+.col-scheda .chat-element .avatar {
+  display: block;
+  float: left;
+  margin-right: 20px;
+}
+
+.col-scheda .chat-element .message {
+  width: 70%;
+  padding: 15px 20px;
+  min-height: 80px;
+  border: solid 1px #000;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+.col-scheda .chat-element .message .date {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: .9em;
+  opacity: .75;
+  font-style: italic;
+}
+
+.col-scheda .chat-element.other .message {
+  background: gray;
+  background: -webkit-gradient(linear, left top, left bottom, from(#383838), to(#000));
+  background: linear-gradient(#383838, #000);
+  float: left;
+  color: #fff;
+  border-color: #FFDB00;
+}
+
+.col-scheda .chat-element.mine .avatar {
+  display: none;
+}
+
+.col-scheda .chat-element.mine .message {
+  background: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  float: right;
+  border-color: #ccc;
 }
 
 .col-scheda .graph-canvas {
