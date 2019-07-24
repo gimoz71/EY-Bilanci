@@ -21,5 +21,6 @@
         "> 1%",
         "last 2 versions"
     ],
-    "html.format.wrapLineLength": 0
+    "html.format.wrapLineLength": 0,
+    "liveSassCompile.settings.showOutputWindow": true
 }

@@ -165,6 +165,8 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="col-sm-12 col-md-6 col-lg-7 col-xl-8 col-scheda">
                     <div class="otherOneOverflow">
                         <!-- classe per calcolare la differenza tra viewport e l'altezza dei contenitori scrollabili -->
@@ -185,6 +187,7 @@
                                     <p class="descrizione">Financial implications and other risks and opportunities due  to...</p>
                                 </div>
                                 <div class="tool">
+                                    <a href="#" class="icon-chat"></a>
                                     <a href="#" class="icon-help"></a>
                                     <a href="#" class="icon-deleghe"></a>
                                 </div>
@@ -205,14 +208,14 @@
                     <div class="row no-gutters overflowContainer">
                         <!-- classe per calcolare l'altezza dei contenitori scrollabili -->
 
-                        <!-- blocco home page -->
+                        <!-- INIZIO GRUPPO WELCOME -->
+                        
                         <div class="welcome d-none">
                             <div class="content">
-
                                 <h2 class="welcome-title"> <img class="yellow-frame" src="images/yellow-frame.png">
                                     PAGINA DI BENVENUTO CON EVENTUALI HELP ONLINE</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet
-                                    rhoncus imperdiet. Maecenas dui ligula,
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet
+                                        rhoncus imperdiet. Maecenas dui ligula,
                                     faucibus vel lacinia sed, varius nec nisl. Pellentesque at magna eu nulla laoreet
                                     vehicula. Nulla facilisi. Integer sit
                                     amet nisi eleifend felis vehicula condimentum. Aenean dignissim nec ipsum lacinia
@@ -222,6 +225,10 @@
                                     ornare lacus eu.</p>
                             </div>
                         </div>
+                            
+                        <!-- FINE GRUPPO WELCOME -->
+
+                        <!-- INIZIO GRUPPO DELEGA -->
 
                         <!-- blocchi di esempio delega multipla -->
                         <div class="brief-scheda d-none">
@@ -242,6 +249,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                         <!-- form delega -->
                         <div class="form-delega d-none">
@@ -328,8 +336,13 @@
                             <p class="utente">Mario Rossi (mr@gmail.com) - 10:24 2 ottobre 2018</p>
                         </div>
 
+                        
+                        <!-- FINE GRUPPO DELEGA-->
+
+                        <!-- INIZIO GRUPPO SCHEDA-->
+
                         <!-- Sezione scheda e propria -->
-                        <div class="sezione-scheda accordion d-none">
+                        <div class="sezione-scheda accordion">
                             <a href="#tab1" class="sezione" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="tab1">
                                 <span>Executives</span><span class="status undone">da completare</span><span class="chevron"><i class="fas fa-chevron-down"></i></span>
                             </a>
@@ -522,7 +535,7 @@
                                 
                             </div>
                         </div>
-                        <div class="sezione-scheda d-none">
+                        <div class="sezione-scheda">
                             <table class="table table-total">
                                 <tr>
                                     <th scope="row">
@@ -536,56 +549,65 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="done d-none">
+                        <div class="done">
                             <a href="#">annulla</a><a href="#">salva</a>
                         </div>
 
-                        <!-- elementi grafico -->
-                        <div class="graph-canvas">
-                            <div class="modulo-grafico" style="top: 100px; left: 200px;">
-                                <div class="elemento-grafico title">
-                                    <p class="item ">Società X - Stabilimento Y</p>
+                        <!-- FINE GRUPPO SCHEDA -->
+                        
+                        
+                        <!-- INIZIO GRUPPO GRAFICO -->
+                        <div CLASS="d-none">
+                            <div class="graph-canvas">
+                                <div class="modulo-grafico" style="top: 100px; left: 200px;">
+                                        <div class="elemento-grafico title">
+                                            <p class="item ">Società X - Stabilimento Y</p>
+                                        </div>
+                                        <div class="elemento-grafico">
+                                        <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                    </div>
+                                    <div class="elemento-grafico">
+                                        <p class="item user">10:24 2 ottobre 2018</p>
+                                    </div>
+                                    <div class="elemento-grafico  last">
+                                        <p class="item perc"><span class="perc-container"><span class="low" style="width: 20%;"></span></span></p>
+                                    </div>
                                 </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                <div class="modulo-grafico" style="top: 300px; left: 200px;">
+                                        <div class="elemento-grafico title">
+                                        <p class="item ">Società X - Stabilimento Y</p>
+                                    </div>
+                                    <div class="elemento-grafico">
+                                        <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                    </div>
+                                    <div class="elemento-grafico">
+                                        <p class="item user">10:24 2 ottobre 2018</p>
+                                    </div>
+                                    <div class="elemento-grafico  last">
+                                        <p class="item perc"><span class="perc-container"><span class="med" style="width: 50%;"></span></span></p>
+                                    </div>
                                 </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">10:24 2 ottobre 2018</p>
-                                </div>
-                                <div class="elemento-grafico  last">
-                                    <p class="item perc"><span class="perc-container"><span class="low" style="width: 20%;"></span></span></p>
-                                </div>
-                            </div>
-                            <div class="modulo-grafico" style="top: 300px; left: 200px;">
-                                <div class="elemento-grafico title">
-                                    <p class="item ">Società X - Stabilimento Y</p>
-                                </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
-                                </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">10:24 2 ottobre 2018</p>
-                                </div>
-                                <div class="elemento-grafico  last">
-                                    <p class="item perc"><span class="perc-container"><span class="med" style="width: 50%;"></span></span></p>
-                                </div>
-                            </div>
-                            <div class="modulo-grafico" style="top: 100px; left: 500px;">
-                                <div class="elemento-grafico title">
-                                    <p class="item ">Società X - Stabilimento Y</p>
-                                </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">Mario Rossi (mr@gmail.com)</p>
-                                </div>
-                                <div class="elemento-grafico">
-                                    <p class="item user">10:24 2 ottobre 2018</p>
-                                </div>
-                                <div class="elemento-grafico  last">
-                                    <p class="item perc"><span class="perc-container"><span class="hight" style="width: 90%;"></span></span></p>
+                                <div class="modulo-grafico" style="top: 100px; left: 500px;">
+                                        <div class="elemento-grafico title">
+                                            <p class="item ">Società X - Stabilimento Y</p>
+                                        </div>
+                                        <div class="elemento-grafico">
+                                            <p class="item user">Mario Rossi (mr@gmail.com)</p>
+                                        </div>
+                                        <div class="elemento-grafico">
+                                            <p class="item user">10:24 2 ottobre 2018</p>
+                                        </div>
+                                        <div class="elemento-grafico  last">
+                                            <p class="item perc"><span class="perc-container"><span class="hight" style="width: 90%;"></span></span></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- FINE GRUPPO GRAFICO -->
+
                     </div>
+
                 </div>
             </div>
         </div>
