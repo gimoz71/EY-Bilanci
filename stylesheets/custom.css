@@ -14897,6 +14897,7 @@ select {
 
 .overflowContainer {
   overflow: auto;
+  position: relative;
 }
 
 .flex {
@@ -15395,7 +15396,7 @@ input[type='checkbox'].undefined:checked + label::before {
   top: 10px;
 }
 
-.col-scheda .info .tool .icon-help, .col-scheda .info .tool .icon-deleghe, .col-scheda .info .tool .icon-chat {
+.col-scheda .info .tool .icon-help, .col-scheda .info .tool .icon-deleghe, .col-scheda .info .tool .icon-chat, .col-scheda .info .tool .icon-documenti {
   display: inline-block;
   height: 26px;
   width: 26px;
@@ -15404,7 +15405,7 @@ input[type='checkbox'].undefined:checked + label::before {
   opacity: .7;
 }
 
-.col-scheda .info .tool .icon-help:hover, .col-scheda .info .tool .icon-deleghe:hover, .col-scheda .info .tool .icon-chat:hover {
+.col-scheda .info .tool .icon-help:hover, .col-scheda .info .tool .icon-deleghe:hover, .col-scheda .info .tool .icon-chat:hover, .col-scheda .info .tool .icon-documenti:hover {
   opacity: 1;
 }
 
@@ -15418,6 +15419,10 @@ input[type='checkbox'].undefined:checked + label::before {
 
 .col-scheda .info .tool .icon-chat {
   background: url(../images/icon-chat.png) no-repeat center center;
+}
+
+.col-scheda .info .tool .icon-documenti {
+  background: url(../images/icon-documenti.png) no-repeat center center;
 }
 
 .col-scheda .form-delega {
@@ -15749,6 +15754,51 @@ input[type='checkbox'].undefined:checked + label::before {
 .col-scheda .done a:hover {
   text-decoration: none;
   background: #fff;
+}
+
+.col-scheda .documento {
+  width: 100%;
+  border: solid 1px #ccc;
+  border-top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#F5F5F5));
+  background: linear-gradient(#ffffff, #F5F5F5);
+  margin: 0 10px;
+  padding: 15px 20px;
+  font-size: 1em;
+  position: relative;
+}
+
+.col-scheda .documento p {
+  margin: 0;
+}
+
+.col-scheda .documento.loader {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#E6E6E6));
+  background: linear-gradient(#FAFAFA, #E6E6E6);
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 20px;
+}
+
+.col-scheda .documento .titolo {
+  padding-left: 35px;
+  position: relative;
+  background: url(../images/icon-documenti.png) no-repeat left center;
+  background-size: 20px 20px;
+  cursor: pointer;
+}
+
+.col-scheda .documento .icon-delete {
+  width: 20px;
+  background: url(../images/icon-delete.png) no-repeat center center;
+  background-size: contain;
+  z-index: 20;
+  position: absolute;
+  right: 20px;
+  top: 15px;
 }
 
 .col-scheda .chat {
