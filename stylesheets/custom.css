@@ -15795,7 +15795,6 @@ input[type='checkbox'].undefined:checked + label::before {
   width: 20px;
   background: url(../images/icon-delete.png) no-repeat center center;
   background-size: contain;
-  z-index: 20;
   position: absolute;
   right: 20px;
   top: 15px;
@@ -15831,6 +15830,35 @@ input[type='checkbox'].undefined:checked + label::before {
   color: #444444;
 }
 
+.col-scheda .quote {
+  text-align: left;
+  margin: 5px 0;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.035);
+  border: solid 1px rgba(0, 0, 0, 0.05);
+  font-size: 11px;
+  font-size: .9em;
+  font-style: italic;
+}
+
+.col-scheda .quote .avatar {
+  display: block;
+  float: left;
+  margin-right: 20px;
+  display: block;
+  margin: 0;
+}
+
+.col-scheda .quote .avatar img {
+  width: 40px;
+  height: 40px;
+}
+
+.col-scheda .quote span {
+  margin-left: 50px;
+  display: block;
+}
+
 .col-scheda .chat-element {
   margin-bottom: 10px;
   width: 100%;
@@ -15859,6 +15887,45 @@ input[type='checkbox'].undefined:checked + label::before {
   font-size: .9em;
   opacity: .75;
   font-style: italic;
+}
+
+.col-scheda .chat-element .message .reply {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: .9em;
+  opacity: 1;
+  padding: 5px 13px;
+}
+
+.col-scheda .chat-element .message .reply:link, .col-scheda .chat-element .message .reply:visited {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.col-scheda .chat-element .message .quote {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.035);
+  border: solid 1px rgba(0, 0, 0, 0.05);
+  font-size: 11px;
+  font-size: .9em;
+  font-style: italic;
+}
+
+.col-scheda .chat-element .message .quote .avatar {
+  display: block;
+  margin: 0;
+}
+
+.col-scheda .chat-element .message .quote .avatar img {
+  width: 40px;
+  height: 40px;
+}
+
+.col-scheda .chat-element .message .quote span {
+  margin-left: 50px;
+  display: block;
 }
 
 .col-scheda .chat-element.other .message {
